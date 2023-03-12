@@ -1,11 +1,12 @@
 import React, { lazy, Suspense } from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route  } from "react-router-dom";
 import LoadingPage from "./pages/User/LoadingPage";
 import Admin from "./routes/Admin";
 import Owner from "./routes/Owner";
 import { AppContext } from "./context/AppContext";
 import { AdminContext } from "./context/AdminContext";
 import { io } from "socket.io-client";
+import Hotale404Page from "./pages/Hotale404Page";
 // import User from "./routes/User";
 
 function App() {
@@ -19,23 +20,29 @@ function App() {
         {/* User Routes */}
         <Suspense fallback={<LoadingPage />}>
           <Routes>
-            <Route path="/*" element={<User />} />
+            <Route exact path="/*" element={<User />} />
           </Routes>
         </Suspense>
 
         {/* Owner Routes */}
         <AppContext.Provider value={{ chat, setChat,socket }}>
           <Routes>
-            <Route path="/owner/*" element={<Owner />} />
+            <Route exact path="/owner/*" element={<Owner />} />
           </Routes>
         </AppContext.Provider>
 
         {/* Admin Routes */}
         <AdminContext.Provider value={{ chatAdmin,setChatAdmin,socket }}>
           <Routes>
-            <Route path="/admin/*" element={<Admin />} />
+            <Route exact path="/admin/*" element={<Admin />} />
           </Routes>
         </AdminContext.Provider>
+
+        {/* 404 Page */}
+        <Routes>
+          <Route path="*" element={<Hotale404Page/>} />
+        </Routes>
+        
       </Router>
     </div>
   );
