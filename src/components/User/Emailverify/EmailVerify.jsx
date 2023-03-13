@@ -10,10 +10,12 @@ function EmailVerify() {
     useEffect(()=>{
         const verifyEmail=async()=>{
             try{
-                Axiosinstance.get(`/${param.id}/verify/${param.token}`).then((response)=>{
-                    console.log(response.data)
-                    setValidUrl(true)
-                })
+                if(param?.id && param?.token){
+                    Axiosinstance.get(`/${param?.id}/verify/${param?.token}`).then((response)=>{
+                        console.log(response.data)
+                        setValidUrl(true)
+                    })
+                }
             }catch(error){
                 console.log(error)
                 setValidUrl(false)
