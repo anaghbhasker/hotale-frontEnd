@@ -6,7 +6,7 @@ import Owner from "./routes/Owner";
 import { AppContext } from "./context/AppContext";
 import { AdminContext } from "./context/AdminContext";
 import { io } from "socket.io-client";
-import Hotale404Page from "./pages/Hotale404Page";
+// import Hotale404Page from "./pages/Hotale404Page";
 // import User from "./routes/User";
 
 function App() {
@@ -39,10 +39,9 @@ function App() {
         </AdminContext.Provider>
 
         {/* 404 Page */}
-        <Routes>
+        {/* <Routes>
           <Route path="*" element={<Hotale404Page/>} />
-        </Routes>
-        
+        </Routes> */}
       </Router>
     </div>
   );
