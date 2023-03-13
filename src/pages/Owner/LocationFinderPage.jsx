@@ -9,6 +9,9 @@ import { ToastContainer, toast } from 'react-toastify';
 import { addLocation } from "../../config/Service/OwnerRequest";
 import MapNavbar from "../../components/Owner/MapNavBar";
 
+// eslint-disable-next-line import/no-webpack-loader-syntax
+mapboxgl.workerClass = require('worker-loader!mapbox-gl/dist/mapbox-gl-csp-worker').default;
+
 const LocationFinderPage = () => {
     mapboxgl.accessToken = "pk.eyJ1IjoiYW5hZ2hiaGFza2VyIiwiYSI6ImNsZTRoOXczZjAzMGEzcW1tdWpienV1YTcifQ._VZD7do8MH-f0_p76quyYQ"
 
