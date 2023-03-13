@@ -18,27 +18,39 @@ import OwnerMessages from '../pages/Owner/OwnerMessages'
 function Owner() {
     return (
         <div>
+            <Routes>
                 <Route path='/' element={<OwnerDashBoardPage/>}/>
-       
+            </Routes>
+            <Routes>
                 <Route path='/login' element={<OwnerLoginPage/>}/>
-       
+            </Routes>
+            <Routes>
                 <Route path='/signup' element={<OwnerSignUppage/>} />
- 
+            </Routes>
+            <Routes>
                 <Route path='/getotp' element={<OwnerOtp/>}/>
- 
+            </Routes>
+            <Routes>
                 <Route path='/showHotels' element={<OwnerHotelPage/>}/>
-      
+            </Routes>
+            <Routes>
                 <Route path='/addHotel' element={<OwnerAddHotelPage/>}/>
-       
+            </Routes>
+            <Routes>
                 <Route path='/mapLocation' element={<LocationFinderPage/>}/>
- 
+            </Routes>
+            <Routes>
                 <Route path='/thankYou' element={<OwnerThanksPage/>}/>
-        
+            </Routes>
+            <Routes>
                 <Route path='/editHotel' element={<OwnerEditHotelPage/>}/>
-  
+            </Routes>
+            <Routes>
                 <Route path='/profileView' element={<OwnerProfilePage/>}/>
-     
+            </Routes>
+            <Routes>
                 <Route path='/messages' element={<OwnerMessages/>}/>
+            </Routes>
         </div>
     )
 }

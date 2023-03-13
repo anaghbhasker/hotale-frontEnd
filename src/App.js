@@ -19,21 +19,29 @@ function App() {
       <Router>
         {/* User Routes */}
         <Suspense fallback={<LoadingPage />}>
+          <Routes>
             <Route exact path="/*" element={<User />} />
+          </Routes>
         </Suspense>
 
         {/* Owner Routes */}
         <AppContext.Provider value={{ chat, setChat,socket }}>
+          <Routes>
             <Route exact path="/owner/*" element={<Owner />} />
+          </Routes>
         </AppContext.Provider>
 
         {/* Admin Routes */}
         <AdminContext.Provider value={{ chatAdmin,setChatAdmin,socket }}>
+          <Routes>
             <Route exact path="/admin/*" element={<Admin />} />
+          </Routes>
         </AdminContext.Provider>
 
         {/* 404 Page */}
+        <Routes>
           <Route path="*" element={<Hotale404Page/>} />
+        </Routes>
         
       </Router>
     </div>
