@@ -10,6 +10,7 @@ function EmailVerify() {
     useEffect(()=>{
         const verifyEmail=async()=>{
             try{
+                console.log(param?.id, param?.token);
                 if(param?.id && param?.token){
                     Axiosinstance.get(`/${param?.id}/verify/${param?.token}`).then((response)=>{
                         console.log(response.data)
