@@ -4,6 +4,10 @@ import "mapbox-gl/dist/mapbox-gl.css";
 import { hoteView } from "../../config/Service/UserRequest";
 import { useLocation } from "react-router-dom";
 
+// eslint-disable-next-line import/no-webpack-loader-syntax
+mapboxgl.workerClass = require('worker-loader!mapbox-gl/dist/mapbox-gl-csp-worker').default;
+
+
 function UserMap() {
   const location = useLocation();
   mapboxgl.accessToken =
