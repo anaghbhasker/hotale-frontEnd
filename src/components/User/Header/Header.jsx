@@ -40,9 +40,9 @@ function Header() {
     setSuggestions([]);
     return;
     }
-    const url = `${process.env.REACT_APP_MAPBOX_GEOCODING}/${encodeURIComponent(
+    const url = `${"https://api.mapbox.com/geocoding/v5/mapbox.places"}/${encodeURIComponent(
     query
-    )}.json?access_token=${process.env.REACT_APP_MAPBOX_TOKEN}`;
+    )}.json?access_token=${"pk.eyJ1IjoiYW5hZ2hiaGFza2VyIiwiYSI6ImNsZTRoOXczZjAzMGEzcW1tdWpienV1YTcifQ._VZD7do8MH-f0_p76quyYQ"}`;
     const response = await fetch(url);
     const data = await response.json();
     setSuggestions(data.features.map((f) => f.place_name));
