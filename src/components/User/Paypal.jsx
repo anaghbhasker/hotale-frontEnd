@@ -47,7 +47,7 @@ function Paypal({personal,userMore}) {
     <>
 
     <PayPalScriptProvider
-      options={{ "client-id": process.env.REACT_APP_PAYPAL_CLIENTID }}
+      options={{ "client-id": "Af4w_H_TEw7jzp_sJsKgqRkO020E0IKF0Ee3iY9CZrxdDd0_ItWvdJOir4CtRW7019NbK9U7OlXf3-_T" }}
     >
       <PayPalButtons
         style={{
