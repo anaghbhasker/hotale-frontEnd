@@ -9,7 +9,7 @@ function UserMap() {
     const hotelId=location.state.hotelId
     const [p1,setP1]=useState(75.373804)
     const [p2,setP2]=useState(11.876225)
-    mapboxgl.accessToken = process.env.REACT_APP_MAPBOX_TOKEN;
+    mapboxgl.accessToken = "pk.eyJ1IjoiYW5hZ2hiaGFza2VyIiwiYSI6ImNsZTRoOXczZjAzMGEzcW1tdWpienV1YTcifQ._VZD7do8MH-f0_p76quyYQ";
     useEffect(() => {
         async function invoke(){
             const data=await hoteView(hotelId)
