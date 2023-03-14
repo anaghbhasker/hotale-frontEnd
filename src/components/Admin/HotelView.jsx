@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import { getThathotel, hotelBann } from "../../config/Service/AdminRequest";
+import HotelBookings from "./HotelBookings";
 
 function HotelView() {
   const location = useLocation();
@@ -44,7 +45,7 @@ function HotelView() {
                   onClick={() => {
                     hotelDisable(hotel._id);
                   }}
-                  className="px-4 bg-gray-900 dark:bg-white dark:text-gray-900 dark:hover:bg-gray-100  flex justify-between items-center w-full lg:w-72 h-14 text-white hover:bg-gray-700 focus:ring-2 outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800 dark:hover:bg-gray-100"
+                  className="px-4 bg-gray-900 dark:bg-white dark:text-gray-900 dark:hover:bg-gray-100  flex justify-between items-center w-full lg:w-72 h-14 text-white hover:bg-gray-700 outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800"
                 >
                   <p className="text-xl font-medium leading-5 ">Remove Ban</p>
                   <img
@@ -63,7 +64,7 @@ function HotelView() {
                   onClick={() => {
                     hotelDisable(hotel._id);
                   }}
-                  className="px-4 bg-gray-900 dark:bg-white dark:text-gray-900 dark:hover:bg-gray-200  flex justify-between items-center w-full lg:w-72 h-14 text-white hover:bg-gray-700 focus:ring-2 outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800 dark:hover:bg-gray-100"
+                  className="px-4 bg-gray-900 dark:bg-white dark:text-gray-900   flex justify-between items-center w-full lg:w-72 h-14 text-white hover:bg-gray-700  outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800 dark:hover:bg-gray-100"
                 >
                   <p className="text-xl font-medium leading-5 ">
                     Temporary Disabled
@@ -91,7 +92,7 @@ function HotelView() {
                 alt="sofa"
               />
             </div>
-            <div className="flex flex-col justify-center items-center space-y-4 sm:space-y-0 sm:space-y-5 lg:space-y-5 xl:space-y-8">
+            <div className="flex flex-col justify-center items-center space-y-4 sm:space-y-0  lg:space-y-5 xl:space-y-8">
               <div>
                 <img className="hidden lg:block" src={hotel?.photo2} alt="" />
                 <img
@@ -149,6 +150,7 @@ function HotelView() {
           </div>
         </div>
       </div>
+      <HotelBookings hotelId={hotel?._id}/>
     </>
   );
 }

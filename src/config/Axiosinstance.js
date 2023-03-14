@@ -1,7 +1,7 @@
 import Axios from 'axios'
 
 const Axiosinstance=Axios.create({
-    baseURL:"https://api.bigmarts.shop/api/",
+    baseURL:"http://localhost:4000/api/",
     headers: {
         "Content-Type": "application/json",
     },

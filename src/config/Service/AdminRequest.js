@@ -274,3 +274,17 @@ export const deNoti=async(id)=>{
         return error.response.data.error;
     }
 }
+
+export const thatBooking=async(hotelId)=>{
+    try {
+        const response=await Axiosinstance.get(`/admin/thatBooking/${hotelId}`,{
+            headers: {
+                adminToken: localStorage.getItem('adminToken'),
+            }
+        })
+        const data=response.data
+        if(data)return data
+    } catch (error) {
+        return error.response.data.error;
+    }
+}
