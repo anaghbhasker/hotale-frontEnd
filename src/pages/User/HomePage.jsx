@@ -6,10 +6,12 @@ import Footer from "../../components/User/Footer/Footer";
 import Plan from "../../components/User/Plan";
 import Review from "../../components/User/Review";
 import ExploreKerala from "../../components/User/ExploreKerala";
+import UserPopUp from "../../components/User/UserPopUp";
 
 function HomePage() {
   return (
     <div>
+      <UserPopUp/>
       <NavbarNew />
       <Header />
       <Plan />

@@ -73,11 +73,11 @@ const handlePickup = async (suggestion) => {
       <div className="headerContainer">
         
         
-        <h1 className="font-extrabold text-2xl">A lifetime of discounts? It's Genius.</h1>
+        <h1 className="font-extrabold text-3xl">Find your next stay.</h1>
         <p className="headerDesc">
-        By continuing, you agree to let hotale.com email you regarding your property registration.Registration is free and can take as little as 15 minutes to complete..
+        By continuing, you agree to let hotale.com ....Search low prices on hotels, homes and much more...
         </p>
-        <button onClick={()=>{navigate('/owner/login')}} className="headerBtn">Sign in / Register</button>
+        
 
 
 
