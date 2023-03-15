@@ -116,7 +116,7 @@ function Login() {
                 Sign up here
               </Link>
             </p>
-            <button
+            {/* <button
               aria-label="Continue with google"
               type="button"
               className="focus:outline-none focus:ring-2 focus:ring-offset-1 focus:ring-gray-700 p-3 border rounded-lg border-gray-700 flex items-center w-full mt-10 hover:bg-gray-100"
@@ -156,7 +156,7 @@ function Login() {
                 OR
               </p>
               <hr className="w-full bg-gray-400" />
-            </div>
+            </div> */}
             <form onSubmit={loginForm}>
               <div>
                 <label
